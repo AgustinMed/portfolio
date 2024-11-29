@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import { Container } from '@mui/material';
+import Formacion from './components/formacion';
+import Experience from './components/experience';
 
 function App() {
+  const [tabValue, setValue] = React.useState(0);
+
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header" >
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Portafolio Agustín Medina
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Container>
+        <div className='tabs-wrapper'>
+          <Tabs value={tabValue} onChange={handleTabChange} className='tabs' centered>
+            <Tab label="Formación" disableRipple/>
+            <Tab label="Experiencia" disableRipple/>
+            <Tab label="Contacto" disableRipple/>
+          </Tabs>
+        </div>
+        <Box className="content">
+          {tabValue === 0 && 
+            <Formacion></Formacion>
+            }
+          {tabValue === 1 && 
+            <Experience></Experience>
+            }
+          {tabValue === 2 && <span>
+            Contenido de Contacto
+            </span>}
+        </Box>
+      </Container>
     </div>
   );
 }
