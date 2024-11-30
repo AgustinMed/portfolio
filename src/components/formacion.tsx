@@ -3,8 +3,7 @@ import React from 'react';
 const Formacion: React.FC = () => {
   return (
     <div>
-      <h1>¡Hola desde Formación!</h1>
-      <p>Este es un componente funcional usando TypeScript.</p>
+      <h1>Formación</h1>
     </div>
   );
 };
