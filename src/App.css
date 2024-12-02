@@ -22,11 +22,11 @@
 } */
 
 
-.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
+/* .css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: white !important;
   font-weight: bold;
   z-index: 4;
-}
+} */
 
 .App-header {
   /* background-color: #282c34; */
@@ -93,17 +93,17 @@ body {
   .mic-logo {
     max-height: 100px;
   }
+  .dialog-img {
+    max-height: 150px;
+  }
+  .cva-logo {
+    max-height: 90px;
+  }
 }
 
 
 .dialog-img {
   max-height: 80px;
-}
-
-@media (min-width: 768px) {
-  .dialog-img {
-    max-height: 150px;
-  }
 }
 
 .go-to-button {

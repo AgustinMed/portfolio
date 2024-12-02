@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Divider, Typography } from '@mui/material';
 
 
 interface customCardProps {
@@ -18,9 +18,10 @@ const customCard: React.FC<customCardProps> = ({ imgSrc, link, title, descriptio
             <Box>
                 <img src={imgSrc} style={{paddingTop: '5%'}} className={imgClass}/>
             </Box>
-            <Typography sx={{fontSize: '13px', textAlign: 'right', display: {xs: 'none', md: 'contents'}}}>
+            <Typography variant='h5' sx={{ textAlign: 'right', display: {xs: 'none', md: 'contents'}}}>
                 {title}
             </Typography>
+            <Divider sx={{ display: { xs: 'none', md: 'block' } }} />
             <Typography sx={{fontSize: '14px', textAlign: { xs: 'justify', md: 'right' },display: {xs: 'none', md: 'contents'}}}>
                 {description}
             </Typography>

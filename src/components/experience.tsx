@@ -153,7 +153,7 @@ const Experience: React.FC = () => {
                         cvaImages,
                         'https://cvagaming.com.ar/'
                     )}
-                    title={'CVA Gaming'} description={'Plataforma de juegos de casino en línea.'} imgClass='cva-logo'></CustomCard>
+                    title={'CVA Gaming'} description={'CVA Magazine.'} imgClass='cva-logo'></CustomCard>
                 </TimelineContent>
             </TimelineItem>
         </Timeline>

@@ -14,6 +14,14 @@ function App() {
     setValue(newValue);
   };
 
+  const tabStyle = {
+    '&.Mui-selected': {
+      color: 'white',
+      fontWeight: 'bold',
+      zIndex: 4,
+    },
+  };
+
   return (
     <div className="App">
       <header className="App-header" >
@@ -31,15 +39,18 @@ function App() {
               borderRadius: '30px',
               margin: 'auto',
               transition: 'all 0.3s ease',
-              color: 'white',
-              fontWeight: 'bold',
-              zIndex: 4
             },
           }} 
           value={tabValue} onChange={handleTabChange} className='tabs' centered>
-            <Tab label="Formación" disableRipple/>
-            <Tab label="Experiencia" disableRipple/>
-            <Tab label="Contacto" disableRipple/>
+            <Tab label="Formación" 
+            sx={tabStyle}
+            disableRipple/>
+            <Tab 
+            sx={tabStyle}
+            label="Experiencia" disableRipple/>
+            <Tab 
+            sx={tabStyle}
+            label="Contacto" disableRipple/>
           </Tabs>
         </div>
         <Box className="content">
