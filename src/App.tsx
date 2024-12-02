@@ -23,7 +23,17 @@ function App() {
       </header>
       <Container>
         <div className='tabs-wrapper'>
-          <Tabs value={tabValue} onChange={handleTabChange} className='tabs' centered>
+          <Tabs
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: '#458588',
+              height: '100%',
+              borderRadius: '30px',
+              margin: 'auto',
+              transition: 'all 0.3s ease' 
+            },
+          }} 
+          value={tabValue} onChange={handleTabChange} className='tabs' centered>
             <Tab label="Formación" disableRipple/>
             <Tab label="Experiencia" disableRipple/>
             <Tab label="Contacto" disableRipple/>

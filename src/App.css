@@ -13,13 +13,13 @@
   }
 }
 
-.css-1qltlow-MuiTabs-indicator {
+/* .css-1qltlow-MuiTabs-indicator {
   background-color: #458588 !important;
   height: 100% !important;
   border-radius: 30px !important;
   margin: auto !important;
   transition: all 0.3s ease !important;
-}
+} */
 
 
 .css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected {
@@ -96,6 +96,27 @@ body {
 }
 
 
+.dialog-img {
+  max-height: 80px;
+}
+
+@media (min-width: 768px) {
+  .dialog-img {
+    max-height: 150px;
+  }
+}
+
+.go-to-button {
+  position: absolute !important;
+  right: 9px !important;
+  top: 80px !important;
+  background-color: #458588 !important;
+  color: white !important;
+  z-index: 4 !important;
+  border-radius: 10px !important;
+}
+
+
 .experience-card {
   background-color: #F7F9F2;
   transition: all 0.3s ease;
@@ -107,6 +128,7 @@ body {
   transform: scale(1.02);
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .tab-title {

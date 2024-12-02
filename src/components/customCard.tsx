@@ -8,17 +8,18 @@ interface customCardProps {
   title: string;
   description: string;
   imgClass: string;
+  onClick?: () => void;
 }
 
-const customCard: React.FC<customCardProps> = ({ imgSrc, link, title, description, imgClass }) => {
+const customCard: React.FC<customCardProps> = ({ imgSrc, link, title, description, imgClass, onClick }) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: 'black', textDecoration: 'none' }}>
+    <a onClick={onClick} target="_blank" rel="noopener noreferrer" style={{ color: 'black', textDecoration: 'none' }}>
         <Container className='experience-card'>
             <Box>
                 <img src={imgSrc} style={{paddingTop: '5%'}} className={imgClass}/>
             </Box>
             <Typography sx={{fontSize: '13px', textAlign: 'right', display: {xs: 'none', md: 'contents'}}}>
-                <h2>{title}</h2>
+                {title}
             </Typography>
             <Typography sx={{fontSize: '14px', textAlign: { xs: 'justify', md: 'right' },display: {xs: 'none', md: 'contents'}}}>
                 {description}
