@@ -32,7 +32,8 @@ function App() {
               margin: 'auto',
               transition: 'all 0.3s ease',
               color: 'white',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
+              zIndex: 4
             },
           }} 
           value={tabValue} onChange={handleTabChange} className='tabs' centered>
