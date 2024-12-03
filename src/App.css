@@ -29,7 +29,8 @@
 } */
 
 .App-header {
-  /* background-color: #282c34; */
+  background-color: #282c34; 
+  margin-bottom: 1%;
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -83,23 +84,40 @@ body {
 
 .mic-logo {
   max-height: 50px;
+  padding-right: 50%;
 }
 
 .cva-logo {
   max-height: 60px;
+  padding-right: 50%;
+}
+
+.expand-icon {
+  color: #6F7B8B;
+  display: none; 
+}
+
+@media (max-width: 600px) {
+  .expand-icon {
+    display: unset;
+  }
 }
 
 @media (min-width: 768px) {
   .mic-logo {
     max-height: 100px;
+    padding-right: 0;
   }
   .dialog-img {
     max-height: 150px;
   }
   .cva-logo {
     max-height: 90px;
+    padding-right: 0;
   }
 }
+
+
 
 .div-subtititle-item {
   background-color: #83A598;
@@ -163,8 +181,14 @@ body {
 .experience-card {
   background-color: #F7F9F2;
   transition: all 0.3s ease;
-  padding: 2%;
   border-radius: 20px;
+  border-top-right-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .experience-card {
+    max-width: 50%;
+  }
 }
 
 .experience-card:hover {

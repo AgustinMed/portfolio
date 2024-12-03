@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Divider, Typography } from '@mui/material';
-
+import { ExpandIcon } from './expandIcon';
 
 interface customCardProps {
   imgSrc: string;
@@ -14,8 +14,9 @@ interface customCardProps {
 const customCard: React.FC<customCardProps> = ({ imgSrc, link, title, description, imgClass, onClick }) => {
   return (
     <a onClick={onClick} target="_blank" rel="noopener noreferrer" style={{ color: 'black', textDecoration: 'none' }}>
-        <Container className='experience-card'>
+        <Container className='experience-card' sx={{paddingRight: 0}}>
             <Box>
+                <ExpandIcon className='expand-icon'/>
                 <img src={imgSrc} style={{paddingTop: '5%'}} className={imgClass}/>
             </Box>
             <Typography variant='h5' sx={{ textAlign: 'right', display: {xs: 'none', md: 'contents'}}}>

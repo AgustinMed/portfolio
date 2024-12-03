@@ -1,7 +1,6 @@
 import { Divider, Grid2, IconButton, List, ListItem, Typography } from '@mui/material';
 import React from 'react';
 import { PointerIcon } from './pointerIcon';
-import CustomIcon from './customIcon';
 
 const Formacion: React.FC = () => {
   return (
