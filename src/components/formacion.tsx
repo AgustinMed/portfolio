@@ -1,4 +1,4 @@
-import { Divider, Grid2, IconButton, Typography } from '@mui/material';
+import { Divider, Grid2, IconButton, List, ListItem, Typography } from '@mui/material';
 import React from 'react';
 import { PointerIcon } from './pointerIcon';
 import CustomIcon from './customIcon';
@@ -7,46 +7,24 @@ const Formacion: React.FC = () => {
   return (
     <div className='experiencia'>
       <h1 className='tab-title'>Formación</h1>
-      
-      
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <div style={{
-          backgroundColor: '#83A598',
-          width: '30%',
-          borderRadius: '20px',
-          margin: 'auto 0',
-          textAlign: 'center',
-        }}>
+      <div className='div-container-f'>
+        <div className='div-subtititle-item'>
           <h2 style={{color: 'white', margin: 0}}>Estudios secundarios</h2>
         </div>
           <IconButton sx={{height: '50px', width: '50px'}}>
             <PointerIcon/>
           </IconButton>
       </div>
-
-      
       <Divider></Divider>
-      <Typography fontSize={'15px'} padding={3} color='white'>
-        Completos, Colegio N°728 Alfonsina Storni, Tecnicatura en  informática, Puerto Madryn – Chubut. 
-        <br/>
-        Título de técnico en informática. 
-      </Typography>
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <div style={{
-          backgroundColor: '#83A598',
-          width: '30%',
-          borderRadius: '20px',
-          margin: 'auto 0',
-          textAlign: 'center',
-        }}>
+      <div className='paragraph-container'>
+        <Typography className='paragraph-typography'>
+          Completos, Colegio N°728 Alfonsina Storni, Tecnicatura en  informática, Puerto Madryn – Chubut. 
+          <br/>
+          Título de técnico en informática. 
+        </Typography>
+      </div>
+      <div className='div-container-f'>
+        <div className='div-subtititle-item'>
           <h2 style={{color: 'white', margin: 0}}>Estudios universitarios</h2>
         </div>
           <IconButton sx={{height: '50px', width: '50px'}}>
@@ -54,12 +32,17 @@ const Formacion: React.FC = () => {
           </IconButton>
       </div>
       <Divider></Divider>
-      <Typography fontSize={'15px'} padding={3} color='white'>
-      Actualmente en 3er - 4to año, Universidad Nacional de  la Patagonia San Juan Bosco, Analista Programador Universitario y Licenciatura en informática, Puerto Madryn – Chubut. 
-      </Typography>
-
-
-
+      <div className='paragraph-container'>
+        <Typography className='paragraph-typography'>
+          Actualmente en 3er - 4to año, Universidad Nacional de la Patagonia San Juan Bosco, 
+          Analista Programador Universitario y Licenciatura en informática, Puerto Madryn – Chubut.
+          <br/>
+          <br/>
+          Porcentaje de la carrera "APU" (Analista Programador Universitario): 83.33%
+          <br/>
+          Porcentaje de la carrera "Licenciatura en informática": 51.52%
+        </Typography>
+      </div>
     </div>
   );
 };

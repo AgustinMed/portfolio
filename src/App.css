@@ -101,6 +101,49 @@ body {
   }
 }
 
+.div-subtititle-item {
+  background-color: #83A598;
+  width: 70%;
+  border-radius: 20px;
+  font-size: 11px;
+  margin: auto 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .div-subtititle-item {
+    width: 30%;
+    font-size: 14px;
+  }
+}
+
+.div-container-f {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+.paragraph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.paragraph-typography {
+  font-size: 15px;
+  padding: 2%;
+  color: white;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 80%
+}
+
+@media (min-width: 768px) {
+  .paragraph-typography {
+    max-width: 50%;
+  }
+}
 
 .dialog-img {
   max-height: 80px;
