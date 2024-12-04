@@ -143,6 +143,24 @@ body {
   justify-content: center
 }
 
+.avatar-list-icon {
+  background-color: #1E3B3C !important
+}
+
+.contact-image {
+  border-radius: 20px;
+  max-height: 250px;
+  position: absolute;
+  margin-left: 15%
+}
+
+@media (max-width: 600px) {
+  .contact-image {
+    max-height: 150px;
+    position: unset;
+    margin-left: unset;
+  }
+}
 
 .paragraph-container {
   display: flex;

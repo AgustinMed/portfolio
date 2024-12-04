@@ -13,7 +13,18 @@ interface customDialogProps {
     link: string
 }
 
-const customDialog: React.FC<customDialogProps> = ({ title, image, description, open, images, onClose, link }) => {
+
+
+const CustomDialog: React.FC<customDialogProps> = ({ title, image, description, open, images, onClose, link }) => {
+  const [loadedImages, setLoadedImages] = useState<boolean[]>([]);
+
+  const handleImageLoad = (index: number) => {
+      setLoadedImages((prev) => {
+          const newLoadedImages = [...prev];
+          newLoadedImages[index] = true;
+          return newLoadedImages;
+      });
+  };
   return (
     <Dialog open={open} onClose={onClose} PaperProps={{ sx: { borderRadius: "20px", backgroundColor: '#F7F9F2' } }}>
       <DialogTitle sx={{ m: 0, p: 2 }}>
@@ -39,17 +50,34 @@ const customDialog: React.FC<customDialogProps> = ({ title, image, description, 
         <Typography>
           {description}
         </Typography>
-        <Carousel sx={{borderRadius: '20px', marginTop: '3%'}}>
-          {images?.map((img, index) => (
-            <div key={index}>
-              <img src={img} alt={`Slide ${index}`} style={{ width: "100%", height: 'auto' }} />
-            </div>
-          ))}
-        </Carousel>
+        {images && images.length > 0 && (
+          <Carousel sx={{ borderRadius: "20px", marginTop: "3%" }}>
+              {images.map((img, index) => (
+                  <div 
+                      key={index} 
+                      style={{ width: "100%", height: "auto", overflow: "hidden", position: "relative" }}
+                  >
+                      <img
+                          src={img}
+                          alt={`Slide ${index}`}
+                          className="carousel-img"
+                          style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              borderRadius: "10px",
+                              display: loadedImages[index] ? "block" : "none",
+                          }}
+                          onLoad={() => handleImageLoad(index)}
+                      />
+                  </div>
+              ))}
+          </Carousel>
+        )}
       </DialogContent>
     </Dialog>
     
   );
 };
 
-export default customDialog;
+export default CustomDialog;
