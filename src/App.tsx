@@ -6,6 +6,7 @@ import Tabs from '@mui/material/Tabs';
 import { Container } from '@mui/material';
 import Formacion from './components/formacion';
 import Experience from './components/experience';
+import Contacto from './components/contacto';
 
 function App() {
   const [tabValue, setValue] = React.useState(0);
@@ -60,9 +61,9 @@ function App() {
           {tabValue === 1 && 
             <Experience></Experience>
             }
-          {tabValue === 2 && <span>
-            Contenido de Contacto
-            </span>}
+          {tabValue === 2 && 
+            <Contacto></Contacto>
+            }
         </Box>
       </Container>
     </div>
