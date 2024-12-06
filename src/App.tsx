@@ -43,12 +43,12 @@ function App() {
             },
           }} 
           value={tabValue} onChange={handleTabChange} className='tabs' centered>
-            <Tab label="Formación" 
+            <Tab label="Experiencia" 
             sx={tabStyle}
             disableRipple/>
             <Tab 
             sx={tabStyle}
-            label="Experiencia" disableRipple/>
+            label="Formación" disableRipple/>
             <Tab 
             sx={tabStyle}
             label="Contacto" disableRipple/>
@@ -56,13 +56,13 @@ function App() {
         </div>
         <Box className="content">
           {tabValue === 0 && 
-            <Formacion></Formacion>
+            <Experience/>
             }
           {tabValue === 1 && 
-            <Experience></Experience>
+            <Formacion/>
             }
           {tabValue === 2 && 
-            <Contacto></Contacto>
+            <Contacto/>
             }
         </Box>
       </Container>

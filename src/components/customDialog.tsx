@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogContent, DialogTitle, IconButton, Typography } from "@mui/material";
+import { Button, Dialog, DialogContent, DialogTitle, Divider, IconButton, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { CloseIcon } from "./closeIcon";
@@ -47,6 +47,10 @@ const CustomDialog: React.FC<customDialogProps> = ({ title, image, description, 
           <img src={image} className="dialog-img"/>
           <Button href={link} target="_blank" className="go-to-button">Ir al sitio</Button>
         </div>
+        <Typography>
+          Puesto: desarrollador FullStack
+        </Typography>
+        <Divider sx={{marginTop: '2%', marginBottom: '2%'}}/>
         <Typography>
           {description}
         </Typography>

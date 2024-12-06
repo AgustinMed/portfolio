@@ -55,6 +55,24 @@ const Contacto: React.FC = () => {
                     primary="Teléfono" primaryTypographyProps={{color: 'white'}} secondary="(0280) 154 84 51 08."
                   />
                 </ListItem>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar className='avatar-list-icon'>
+                      <i className="bi bi-file-earmark-pdf"></i>
+                    </Avatar>
+                  </ListItemAvatar>
+                  <a
+                    href="/assets/cv.pdf"
+                    download="Agustin_Medina_CV.pdf"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <ListItemText
+                      primary="Descargar CV"
+                      primaryTypographyProps={{ color: 'white' }}
+                      secondary="Click para descargar"
+                    />
+                  </a>
+                </ListItem>
             </List>
 
         

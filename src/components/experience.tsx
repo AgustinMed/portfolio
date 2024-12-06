@@ -6,7 +6,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { TimelineOppositeContent } from '@mui/lab';
-import { Box, Container, Grid2, Typography } from '@mui/material';
+import { Box, Container, Divider, Grid2, Typography } from '@mui/material';
 import micLogo from '../assets/mic.png';
 import cvaLogo from '../assets/cva.png';
 import CustomIcon from './customIcon';
@@ -15,25 +15,19 @@ import CustomDialog from './customDialog';
 import {
     FaJs,
     FaPython,
-    FaHtml5,
-    FaCss3Alt,
-    FaGitAlt,
-    FaTrello,
-    FaAngular,
     FaReact,
     FaVuejs,
-    FaNodeJs,
   } from "react-icons/fa";
   import { RiJavaLine, RiNextjsFill } from "react-icons/ri";
   import {
     SiPostgresql,
     SiNestjs,
     SiFlask,
-    SiSpring,
     SiMongodb,
     SiMinio,
     SiTypescript,
   } from "react-icons/si";
+import Conocimientos from './conocimientos';
 
 const micImages = [
     require("../assets/mic_1.png"),
@@ -67,35 +61,47 @@ const Experience: React.FC = () => {
     
   return (
     <div className='experiencia'>
+        <Conocimientos/>
+        <Divider variant='middle' sx={{borderWidth: '1px', marginTop: '5%'}}/>
       <h1 className='tab-title'>Experiencia</h1>
         <Timeline position="left">
             <TimelineItem>
-                <TimelineOppositeContent color="text.secondary">
+                <TimelineOppositeContent color="white">
                     Agosto 2023 - Diciembre 2023
                     <Grid2 container spacing={2} columns={3}>
                         <Grid2>
-                            <CustomIcon color='#58C4DC'>
+                            <CustomIcon color='#58C4DC' title='React'>
                                 <FaReact size={'60%'} />
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#E0224E'>
+                            <CustomIcon color='#E0224E' title='NestJs'>
                                 <SiNestjs size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#3179C7'>
+                            <CustomIcon color='#080808' title='NextJs'>
+                                <RiNextjsFill size={'60%'}/>
+                            </CustomIcon>
+                        </Grid2>
+                        <Grid2>
+                            <CustomIcon color='#3179C7' title='Typescript'>
                                 <SiTypescript size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#C63F50'>
+                            <CustomIcon color='#C63F50' title='Minio'>
                                 <SiMinio size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#316192'>
+                            <CustomIcon color='#316192' title='Postgresql'>
                                 <SiPostgresql size={'60%'}/>
+                            </CustomIcon>
+                        </Grid2>
+                        <Grid2>
+                            <CustomIcon color='#F9DC43' title='Javascript'>
+                                <FaJs size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                     </Grid2>
@@ -114,31 +120,36 @@ const Experience: React.FC = () => {
                         micImages,
                         'https://mapainteractivocultural.ar/home/events'
                     )}
-                    title={'Mapa Interactivo Cultural (MIC)'} description={'CAMAD - Camara de Industria, Comercio y Turismo de Puerto Madryn.'} imgClass='mic-logo'></CustomCard>
+                    title={'Mapa Interactivo Cultural (MIC)'} description={'-Desarrollador FullStack- CAMAD - Camara de Industria, Comercio y Turismo de Puerto Madryn.'} imgClass='mic-logo'></CustomCard>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineOppositeContent color="text.secondary">
+                <TimelineOppositeContent color="white">
                     Marzo 2024 - Diciembre 2024
                     <Grid2 container spacing={2} columns={3}>
                         <Grid2>
-                            <CustomIcon color='#FFD448'>
+                            <CustomIcon color='#FFD448' title='Python'>
                                 <FaPython size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#09B680'>
+                            <CustomIcon color='#09B680' title='VueJs'>
                                 <FaVuejs size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#010101'>
-                            <SiFlask size={'60%'}/>
+                            <CustomIcon color='#010101' title='Flask'>
+                                <SiFlask size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                         <Grid2>
-                            <CustomIcon color='#52AC43'>
+                            <CustomIcon color='#52AC43' title='MongoDB'>
                                 <SiMongodb size={'60%'}/>
+                            </CustomIcon>
+                        </Grid2>
+                        <Grid2>
+                            <CustomIcon color='#F9DC43' title='Javascript'>
+                                <FaJs size={'60%'}/>
                             </CustomIcon>
                         </Grid2>
                     </Grid2>
@@ -153,7 +164,7 @@ const Experience: React.FC = () => {
                         cvaImages,
                         'https://cvagaming.com.ar/'
                     )}
-                    title={'CVA Gaming'} description={'CVA Magazine.'} imgClass='cva-logo'></CustomCard>
+                    title={'CVA Gaming'} description={'-Desarrollador FullStack- CVA Magazine.'} imgClass='cva-logo'></CustomCard>
                 </TimelineContent>
             </TimelineItem>
         </Timeline>

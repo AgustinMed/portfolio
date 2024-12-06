@@ -18,7 +18,6 @@ const Formacion: React.FC = () => {
           </IconButton>
         </a>
       </div>
-      <Divider></Divider>
       <div className='paragraph-container'>
         <Typography className='paragraph-typography'>
           Completos, Colegio N°728 Alfonsina Storni, Tecnicatura en  informática, Puerto Madryn – Chubut. 
@@ -26,6 +25,7 @@ const Formacion: React.FC = () => {
           Título de técnico en informática. 
         </Typography>
       </div>
+      <Divider variant='middle' sx={{borderWidth: '1px'}}/>
       <div className='div-container-f'>
         <div className='div-subtititle-item'>
           <h2 style={{color: 'white', margin: 0}}>Estudios universitarios</h2>
@@ -38,18 +38,18 @@ const Formacion: React.FC = () => {
           </IconButton>
         </a>
       </div>
-      <Divider></Divider>
       <div className='paragraph-container'>
         <Typography className='paragraph-typography'>
           Actualmente en 3er - 4to año, Universidad Nacional de la Patagonia San Juan Bosco, 
           Analista Programador Universitario y Licenciatura en informática, Puerto Madryn – Chubut.
           <br/>
           <br/>
-          Porcentaje de la carrera "APU" (Analista Programador Universitario): 83.33%
+          Porcentaje de la carrera "APU" (Analista Programador Universitario): <b><u>83.33%</u></b>
           <br/>
-          Porcentaje de la carrera "Licenciatura en informática": 51.52%
+          Porcentaje de la carrera "Licenciatura en informática": <b><u>51.52%</u></b>
         </Typography>
       </div>
+      
     </div>
   );
 };
