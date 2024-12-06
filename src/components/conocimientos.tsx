@@ -45,7 +45,7 @@ const Conocimientos: React.FC = () => {
         <CustomIcon color={'#E0224E'} title='NestJs'><SiNestjs size={'60%'} /></CustomIcon>
         <CustomIcon color={'#E0224E'} title='NextJs'><RiNextjsFill size={'60%'} /></CustomIcon>
         <CustomIcon color={'#3179C7'} title='Typescript'><SiTypescript size={'60%'} /></CustomIcon>
-        <CustomIcon color={'#68BE4C'} title='Sprint'><SiSpring size={'60%'} /></CustomIcon>
+        <CustomIcon color={'#68BE4C'} title='Spring'><SiSpring size={'60%'} /></CustomIcon>
         <CustomIcon color={'#316192'} title='Postgresql'><SiPostgresql size={'60%'} /></CustomIcon>
         <CustomIcon color={'#52AC43'} title='MongoDB'><SiMongodb size={'60%'} /></CustomIcon>
         <CustomIcon color={'#C63F50'} title='Minio'><SiMinio size={'60%'} /></CustomIcon>
